@@ -1,0 +1,19 @@
+/* 
+Title : DynamicProgramming
+Author : Adrian Lee
+Date : 2020.02.16
+Description : DynamicProgramming Basic Example
+*/
+
+// Memorization
+public static int[] x;
+
+// Get Value
+public static long fibonacci(int n){
+  x[0] = 0;
+  x[1] = 1;
+  if(n>=2 && x[n]==0){
+    x[n] = fibonacci(n-1) + fibonacci(n-2);
+  }
+  return x[n];
+}
